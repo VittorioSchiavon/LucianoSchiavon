@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Cardo&display=swap');
+
+:root{
+    --mainColor:  rgb(128, 128, 128);
+    --mainWhite:#f3f3f3;
+    --mainBlack:#1f1f1f;
+    --shadow:rgba(70, 70, 70, 0.514);
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Cardo', serif;
+
+}
+
+::-webkit-scrollbar {
+    width: 0.5em;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background:var(--mainColor); 
+    border-radius: 10px;
+}
+
+html{
+    height: 100%;
+    background-color: var(--mainBlack);
+    
+}
+body{
+    display:flex;
+    flex-direction: column;
+    color: var(--mainWhite);
+}
+
+.glassEffect{
+    backdrop-filter: blur( 2.0px );
+    -webkit-backdrop-filter: blur( 2.0px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow:  5px 5px 5px #161616;
+    border-radius: 20px;
+}
+
+.glassEffectInset{
+    backdrop-filter: blur( 0.0px );
+    -webkit-backdrop-filter: blur( 0px );
+    border: inset 1px solid rgba( 255, 255, 255, 0.18 );
+    box-shadow:  inset 5px 5px 5px #161616;
+    border-radius: 20px;
+}
+
+
+#hamburger{
+    position: fixed;
+    top:5%;
+    left:95%;
+    height: 3em;
+    width: 3em;
+    padding: 0.5em;
+    font-size: 1.2em;
+    background-color: transparent;
+    color: var(--mainWhite);
+    z-index: 11;
+
+}
+#navContainer{
+    position: fixed;
+    transform: translateX(-100%);
+    transition: transform 0.6s ease-in-out;
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+}
+
+#navContainer.active{
+    transform: translateX(0%);
+
+}
+
+nav{
+    display:flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 45vw;
+    height: 65vh;
+   
+
+}
+nav ul{
+    list-style: none;
+}
+
+nav ul li{   
+    margin: 2em;
+    background-color: var(--mainBlack);
+    border-radius: 0.3em;
+    padding: 1em;
+
+
+}
+
+a{
+    font-size: 2em;
+    margin: 1em;
+    color: var(--mainWhite);
+}
+
+
+.screen{
+    display: flex;
+    
+    text-align: center;
+    align-items: center;
+    color: var(--mainWhite);
+    text-shadow: 5px 5px 3px var(--shadow);
+}
+.screen a{
+    font-size: 1.5em;
+    color: var(--mainWhite);
+    text-shadow: none;
+    margin: 2em;
+    
+}
+#firstScreen img{
+    display: block;
+    margin-left: auto;
+    width: 50vw;
+
+}
+.textBox{
+    padding:4em;
+    text-align: center;
+    width: 50vw;
+}
+body h1, a{
+    font-size: 2em;
+    padding: 0.5em;
+    margin: 1em;
+
+}
+body h2{
+    font-size: 1.5em;
+}
+
+#secondScreen img{
+    display: block;
+    margin-left: auto;
+    width: 50vw;
+}
+
+#thirdScreen img{
+    display: block;
+    margin-left: auto;
+    width: 50vw;
+}
